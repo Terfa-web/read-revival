@@ -1,0 +1,49 @@
+.links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-size: 2rem;
+}
+
+.logout {
+  padding: 1.5rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.menuButton,
+.mobileLinks {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .links {
+    display: none;
+  }
+
+  .menuButton {
+    display: block;
+    cursor: pointer;
+  }
+
+  .mobileLinks {
+    position: absolute;
+    top: 10rem;
+    right: 0;
+    width: 50%;
+    height: calc(100vh -10rem);
+    /* background-color: var(--bg); */
+    background-color: rebeccapurple;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+
+  .mobileTitles {
+    max-width: 60px;
+  }
+}

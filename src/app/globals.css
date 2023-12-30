@@ -6,6 +6,10 @@
   --btn: #3673fd;
 }
 
+html {
+  font-size: 10px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -22,7 +26,6 @@ a {
 }
 
 .container {
-  background-color: blue;
   width: 1536px;
   margin: auto;
   padding-left: 50px;
@@ -31,4 +34,34 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+@media (max-width: 1536px) {
+  .container {
+    width: 1280px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .container {
+    width: 1024px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 640px;
+  }
+}
+
+@media (max-width: 648px) {
+  .container {
+    width: 475px;
+  }
 }
