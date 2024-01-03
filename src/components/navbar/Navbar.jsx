@@ -1,8 +1,13 @@
+import { auth } from "@/lib/auth";
 import Links from "./links/Links";
 import styles from "./navbar.module.css";
 import Image from "next/image";
 import Link from "next/link";
-const Navbar = () => {
+const Navbar = async () => {
+  const session = await auth();
+
+  console.log(session);
+
   return (
     <div className={styles.container}>
       <Link href="/" className={styles.logo}>
@@ -16,7 +21,7 @@ const Navbar = () => {
         𝑹℮а𝕕 ℛ𝚎𝗏𝗂𝑣⍺L
       </Link>
       <div>
-        <Links />
+        <Links session={session} />
       </div>
     </div>
   );

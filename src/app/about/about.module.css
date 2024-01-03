@@ -5,7 +5,7 @@
 
 .firstContainer {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .secondContainer {
@@ -38,7 +38,7 @@
 .imgContainerImage {
   border-radius: 100px 40px 60px 0;
   max-width: 1000px;
-  height: 100%;
+
   object-fit: cover;
   margin: 0 auto;
   align-self: center;

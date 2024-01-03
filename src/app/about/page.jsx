@@ -1,6 +1,11 @@
 import Image from "next/image";
 import styles from "./about.module.css";
 
+export const metadata = {
+  title: "About Page",
+  description: "about us.",
+};
+
 const AboutPage = () => {
   return (
     <div className={styles.container}>
@@ -8,8 +13,9 @@ const AboutPage = () => {
         <div className={styles.textContainer}>
           <h1 className={styles.title}>Mission Statement</h1>
           <p className={styles.text}>
-            To source for and make available to students a variety of
-            supplementary readers and other books, and to corroborate with
+            To sorce for and make available to students a variety of
+            supplementary To source for and make available to students a variety
+            of supplementary readers and other books, and to corroborate with
             schools towards encouraging and reviving the culture of reading for
             information, knowledge, and enjoyment.
           </p>
@@ -20,6 +26,7 @@ const AboutPage = () => {
             src="/handingbooktostudents.jpg"
             alt=""
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
       </div>
@@ -45,6 +52,7 @@ const AboutPage = () => {
             src="/group1.jpg"
             alt="group pic"
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
         <h1 className={styles.title2}>

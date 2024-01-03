@@ -73,3 +73,17 @@
   display: flex;
   cursor: pointer;
 }
+
+@media screen and (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    /* Add other styles as needed for smaller screens */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 64px;
+    /* Add other styles as needed for smaller screens */
+  }
+}

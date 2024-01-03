@@ -3,6 +3,10 @@
 import styles from "./links.module.css";
 import NavLink from "./navLink/navLink";
 import { useState } from "react";
+import MenuIcon from "@mui/icons-material/Menu";
+import { handleLogout } from "@/lib/actions";
+import { auth } from "@/lib/auth";
+
 const links = [
   { title: "Home", path: "/" },
   { title: "About", path: "/about" },
@@ -13,11 +17,11 @@ const links = [
   { title: "Ourwork", path: "/ourwork" },
 ];
 
-const Links = () => {
+const Links = ({ session }) => {
   const [open, setOpen] = useState(false);
 
   //temporary
-  const session = true;
+
   const isAdimin = true;
 
   return (
@@ -26,21 +30,25 @@ const Links = () => {
         {links.map((link) => (
           <NavLink item={link} key={link.title} />
         ))}
-        {session ? (
+        {session?.user ? (
           <>
-            {isAdimin && <NavLink item={{ title: "Admin", path: "/admin" }} />}
-            <button className={styles.logout}>Logout</button>
+            {session?.user.isAdimin && (
+              <NavLink item={{ title: "Admin", path: "/admin" }} />
+            )}
+            <form action={handleLogout}>
+              <button className={styles.logout}>Logout</button>
+            </form>
           </>
         ) : (
           <NavLink item={{ title: "Login", path: "/login" }} />
         )}
       </div>
-      <button
+
+      <MenuIcon
         className={styles.menuButton}
         onClick={() => setOpen((prev) => !prev)}
-      >
-        Menu
-      </button>
+        alt="menu"
+      />
       {open && (
         <div className={styles.mobileLinks}>
           {links.map((link) => (

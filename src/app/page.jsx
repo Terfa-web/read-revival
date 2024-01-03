@@ -29,6 +29,7 @@ const Home = () => {
           fill
           alt="children with books"
           className={styles.heroImg}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div>
     </div>
