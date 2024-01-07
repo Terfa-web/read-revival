@@ -5,9 +5,8 @@ import styles from "./loginForm.module.css";
 
 import { login } from "@/lib/actions";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 
-const loginForm = () => {
+const LoginForm = () => {
   const [state, formAction] = useFormState(login, undefined);
 
   return (
@@ -25,4 +24,4 @@ const loginForm = () => {
   );
 };
 
-export default loginForm;
+export default LoginForm;

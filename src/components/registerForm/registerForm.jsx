@@ -8,7 +8,7 @@ import Link from "next/link";
 import { useEffect } from "react";
 import { register } from "@/lib/actions";
 
-const registerForm = () => {
+const RegisterForm = () => {
   const [state, formAction] = useFormState(register, undefined);
 
   const router = useRouter();
@@ -35,4 +35,4 @@ const registerForm = () => {
   );
 };
 
-export default registerForm;
+export default RegisterForm;
