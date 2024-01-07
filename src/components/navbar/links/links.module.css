@@ -30,12 +30,14 @@
     display: none;
   }
 
-  .menuButton {
-    display: block;
-    cursor: pointer;
-    width: 30px;
-    height: 30px;
-  }
+  @media (max-width: 768px) {
+    .menuButton {
+      display: block;
+      cursor: pointer;
+      width: 30px;
+      height: 30px;
+    }
+  
 
   .mobileLinks {
     position: absolute;
