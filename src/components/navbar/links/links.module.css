@@ -25,6 +25,10 @@
   .links {
     display: none;
   }
+@media (min-width: 768px) {
+  .menuIcon {
+    display: none;
+  }
 
   .menuButton {
     display: block;
