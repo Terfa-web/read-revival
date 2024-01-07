@@ -25,7 +25,7 @@
   .links {
     display: none;
   }
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .menuIcon {
     display: none;
   }
