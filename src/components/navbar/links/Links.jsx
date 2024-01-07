@@ -1,11 +1,10 @@
 "use client";
 
+import { handleLogout } from "@/lib/actions";
+import MenuIcon from "@mui/icons-material/Menu";
+import { useState } from "react";
 import styles from "./links.module.css";
 import NavLink from "./navLink/navLink";
-import { useState } from "react";
-import MenuIcon from "@mui/icons-material/Menu";
-import { handleLogout } from "@/lib/actions";
-import { auth } from "@/lib/auth";
 
 const links = [
   { title: "Home", path: "/" },

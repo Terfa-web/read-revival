@@ -1,10 +1,9 @@
 "use client";
 
-import styles from "./home.module.css";
 import Image from "next/image";
-import { FaFacebook, FaTwitter, FaWhatsapp, FaInstagram } from "react-icons/fa";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import styles from "./home.module.css";
 
 const Home = () => {
   const router = useRouter();

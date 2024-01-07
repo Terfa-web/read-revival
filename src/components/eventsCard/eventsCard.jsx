@@ -1,7 +1,5 @@
-import Link from "next/link";
-import React from "react";
-import styles from "./eventsCard.module.css";
 import Image from "next/image";
+import styles from "./eventsCard.module.css";
 
 const EventsCard = () => {
   const trustees = [
