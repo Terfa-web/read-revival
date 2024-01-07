@@ -8,6 +8,7 @@
   position: relative;
   height: calc(100vh - 207px);
   overflow: hidden;
+  box-shadow: 0 0 15px rebeccapurple;
 }
 
 .textContainer {

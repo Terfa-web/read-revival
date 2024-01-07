@@ -14,15 +14,11 @@ const links = [
   { title: "Trustees", path: "/trustees" },
   { title: "Contact", path: "/contact" },
   { title: "Blog", path: "/blog" },
-  { title: "Ourwork", path: "/ourwork" },
+  { title: "Events", path: "/events" },
 ];
 
 const Links = ({ session }) => {
   const [open, setOpen] = useState(false);
-
-  //temporary
-
-  const isAdimin = true;
 
   return (
     <div className={styles.container}>
@@ -32,7 +28,7 @@ const Links = ({ session }) => {
         ))}
         {session?.user ? (
           <>
-            {session?.user.isAdimin && (
+            {session?.user.isAdmin && (
               <NavLink item={{ title: "Admin", path: "/admin" }} />
             )}
             <form action={handleLogout}>

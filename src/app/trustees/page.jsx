@@ -1,4 +1,6 @@
 import React from "react";
+import styles from "./trustees.module.css";
+import TrusteeCard from "@/components/trusteeCard/trusteeCard";
 
 export const metadata = {
   title: "Trustees Page",
@@ -6,7 +8,11 @@ export const metadata = {
 };
 
 const TrusteesPage = () => {
-  return <div>TrusteesPage</div>;
+  return (
+    <div className={styles.container}>
+      <TrusteeCard />
+    </div>
+  );
 };
 
 export default TrusteesPage;

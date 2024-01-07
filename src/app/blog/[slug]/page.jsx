@@ -33,11 +33,11 @@ const SinglePostPage = async ({ params }) => {
   // const post = await getPost(slug);
   return (
     <div className={styles.container}>
-      {post.img && (
+      {post.title && (
         <div className={styles.imgContainer}>
           <Image
             className={styles.img}
-            src={post.img}
+            src={post.img || "/blogImage.webp"}
             fill
             alt=""
             sizes="(max-width: 768px) 50vw, (max-width: 1200px) 50vw, 33vw"
@@ -53,7 +53,7 @@ const SinglePostPage = async ({ params }) => {
           <div className={styles.detailText}>
             <span className={styles.detailTitle}>Published</span>
             <span className={styles.detailValue}>
-              {post.createdAt.toString().slice(4, 16)}
+              {post.createdAt.toString().slice(0, 10)}
             </span>
           </div>
         </div>

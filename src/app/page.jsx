@@ -1,36 +1,65 @@
+"use client";
+
 import styles from "./home.module.css";
 import Image from "next/image";
 import { FaFacebook, FaTwitter, FaWhatsapp, FaInstagram } from "react-icons/fa";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const Home = () => {
+  const router = useRouter();
+
   return (
-    <div className={styles.container}>
-      <div className={styles.textContainer}>
-        <h1 className={styles.title}>Yes, I Can read.</h1>
-        <p className={styles.quote}>
-          It is my desire to see thousands of children become proficient at
-          reading.
-        </p>
-        <span className={styles.author}>--Mr Terhemba Nomhwange(Founder)</span>
-        <div className={styles.buttons}>
-          <button className={styles.button}>Read More</button>
-          <button className={styles.button}>Contact</button>
+    <div className={styles.genContainer}>
+      <div className={styles.container}>
+        <div className={styles.textContainer}>
+          <h1 className={styles.title}>Yes, I Can read.</h1>
+          <p className={styles.quote}>
+            It is my desire to see thousands of children become proficient at
+            reading.
+          </p>
+          <span className={styles.author}>
+            --Mr Terhemba Nomhwange(Founder)
+          </span>
+          <div className={styles.buttons}>
+            <button
+              onClick={() => router.push("/founder")}
+              className={styles.button}
+            >
+              Read More
+            </button>
+
+            <button
+              onClick={() => router.push("/contact")}
+              className={styles.button}
+              as
+              Link
+            >
+              Contact
+            </button>
+          </div>
+          <div className={styles.mediaLinks}>
+            <FaFacebook size={30} style={{ marginRight: "10px" }} />
+            <FaTwitter size={30} style={{ marginRight: "10px" }} />
+            {/* <FaWhatsapp size={30} style={{ marginRight: "10px" }} /> */}
+            <FaInstagram size={30} />
+          </div>
         </div>
-        <div className={styles.mediaLinks}>
-          <FaFacebook size={30} style={{ marginRight: "10px" }} />
-          <FaTwitter size={30} style={{ marginRight: "10px" }} />
-          <FaWhatsapp size={30} style={{ marginRight: "10px" }} />
-          <FaInstagram size={30} />
+        <div className={styles.imgContainer}>
+          <Image
+            src="/students.jpg"
+            fill
+            alt="children with books"
+            className={styles.heroImg}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
         </div>
       </div>
-      <div className={styles.imgContainer}>
-        <Image
-          src="/students.jpg"
-          fill
-          alt="children with books"
-          className={styles.heroImg}
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        />
+      <div className={styles.videoContainer}>
+        <video className={styles.video} controls>
+          <source src="/ReadRevivalVideo.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </div>
     </div>
   );

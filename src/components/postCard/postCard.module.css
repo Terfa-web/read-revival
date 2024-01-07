@@ -13,6 +13,7 @@
   width: 90%;
   height: 400px;
   position: relative;
+  box-shadow: 0 0 20px rebeccapurple;
 }
 
 .img {

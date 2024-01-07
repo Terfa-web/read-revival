@@ -1,0 +1,32 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 30px;
+}
+.form input {
+  padding: 20px;
+  background: var(--bg);
+  color: var(--textColor);
+  border: none;
+  border-radius: 5px;
+}
+
+.form button {
+  padding: 20px;
+  cursor: pointer;
+  background: var(--btn);
+  color: var(--textColor);
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+}
+
+.register {
+  font-size: 1.3rem;
+}
+
+.registerLink {
+  color: var(--btn);
+  margin-left: 1rem;
+}
