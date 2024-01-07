@@ -108,6 +108,85 @@
   line-height: 1.4;
 }
 
+/* Add transition to all properties for a smooth animation */
+.container,
+.secondContainer,
+.imgContainer,
+.img2Container,
+.textContainer,
+.title,
+.text,
+.title2,
+.text2,
+.title3,
+.text3,
+.title4,
+.text4 {
+  transition: all 1s ease;
+}
+
+/* Animation for ease-in */
+.easeIn {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.easeIn.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animation for ease-out */
+.easeOut {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.easeOut.active {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* Animation for fade-in */
+.fadeIn {
+  opacity: 0;
+}
+
+.fadeIn.active {
+  opacity: 1;
+}
+
+/* Animation for fade-out */
+.fadeOut {
+  opacity: 1;
+}
+
+.fadeOut.active {
+  opacity: 0;
+}
+
+/* Animation for ease-up */
+.easeUp {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.easeUp.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animation for ease-down */
+.easeDown {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.easeDown.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @media (max-width: 768px) {
   .firstContainer {
     flex-direction: column;
@@ -122,3 +201,5 @@
     align-self: center;
   }
 }
+
+/* Add transition to all properties for a smooth animation */

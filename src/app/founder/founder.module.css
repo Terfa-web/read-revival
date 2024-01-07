@@ -1,3 +1,26 @@
+@keyframes easeDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Keyframes for textContainer ease-up with fade animation */
+@keyframes easeUpFadeIn {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -10,6 +33,7 @@
   height: 500px;
   width: 600px;
   margin: 4rem;
+  animation: easeDown 1s ease; /* Adjust the duration and easing as needed */
 }
 
 .img {
@@ -31,6 +55,7 @@
   flex: 1;
   gap: 10px;
   max-width: 900px;
+  animation: easeUpFadeIn 1s ease; /* Adjust the duration and easing as needed */
 }
 
 .title {
