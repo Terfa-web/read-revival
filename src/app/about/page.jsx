@@ -13,9 +13,8 @@ const AboutPage = () => {
         <div className={`${styles.textContainer} fadeOut`}>
           <h1 className={`${styles.title} easeIn`}>Mission Statement</h1>
           <p className={`${styles.text} fadeIn`}>
-            To sorce for and make available to students a variety of
-            supplementary To source for and make available to students a variety
-            of supplementary readers and other books, and to corroborate with
+            To source for and make available to students a variety of
+            supplementary readers and other books, and to corroborate with
             schools towards encouraging and reviving the culture of reading for
             information, knowledge, and enjoyment.
           </p>
