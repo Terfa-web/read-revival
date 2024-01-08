@@ -8,7 +8,7 @@ export const connectToDb = async () => {
       console.log("Using existing connection");
       return;
     }
-    const uri = process.env.MONGO 
+    const uri = process.env.MONGO || 'mongodb+srv://afathelion:ekaete1985@readrevival.o9bd1ym.mongodb.net/revivalread?retryWrites=true&w=majority'
     await mongoose.connect(uri);
 
     if (mongoose.connection.readyState === 1) {
