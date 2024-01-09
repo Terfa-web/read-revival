@@ -38,7 +38,14 @@ const Home = () => {
             </button>
           </div>
           <div className={styles.mediaLinks}>
-            <FaFacebook size={30} style={{ marginRight: "10px" }} />
+            <a
+              href={"https://www.facebook.com/profile.php?id=61555163053778"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaFacebook size={30} style={{ marginRight: "10px" }} />
+            </a>
+
             <FaTwitter size={30} style={{ marginRight: "10px" }} />
             {/* <FaWhatsapp size={30} style={{ marginRight: "10px" }} /> */}
             <FaInstagram size={30} />
