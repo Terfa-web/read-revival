@@ -67,6 +67,12 @@ const Home = () => {
           Your browser does not support the video tag.
         </video>
       </div>
+      <div className={styles.videoContainer}>
+        <video className={styles.video} controls>
+          <source src="/testimonial1.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
     </div>
   );
 };
