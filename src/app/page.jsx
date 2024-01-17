@@ -72,6 +72,7 @@ const Home = () => {
           <source src="/testimonial1.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
+        <h3>Principals Testimonial</h3>
       </div>
     </div>
   );
