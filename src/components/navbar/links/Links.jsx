@@ -1,6 +1,5 @@
 "use client";
 
-import { handleLogout } from "@/lib/actions";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
 import styles from "./links.module.css";
@@ -16,7 +15,7 @@ const links = [
   { title: "Events", path: "/events" },
 ];
 
-const Links = ({ session }) => {
+const Links = () => {
   const [open, setOpen] = useState(false);
 
   return (
