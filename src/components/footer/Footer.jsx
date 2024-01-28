@@ -19,10 +19,7 @@ const Footer = () => {
         </Link>
       </div>
       <div className={styles.text}>
-        <p>
-          Copyright &#64;2024 Read Revival Initiative | Nigeria Corporate
-          Registry(CAC) Number 159641
-        </p>
+        <p>All rights reserved.</p>
       </div>
     </div>
   );
